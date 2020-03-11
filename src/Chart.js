@@ -1,8 +1,22 @@
-d3.select()
-d3.selectAll()
+import React, { Component } from 'react';
+import * as d3 from 'd3'
+const data =[1,2,3,]
+class Chart extends Component {
+    componentDidMount(){
+        d3.select(this.refs.temperatures)
+        .selectAll("h2")
+        .data(data)
+        .enter()
+            .append("h2")
+            .text("New Temperature")
+    }
+    render() {
+        return (
+            <div ref="temperatures">
+                
+            </div>
+        );
+    }
+}
 
-d3.select('chart').style('color', 'blue')
-    .attr('class', 'heading')
-    .text('Updated')
-
-d3.select('body').append('p').text('First paragraph')
+export default Chart;
