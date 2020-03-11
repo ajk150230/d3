@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import Chart from './chart'
+import Chart from './Chart.js'
 import './App.css';
 
 function App() {
